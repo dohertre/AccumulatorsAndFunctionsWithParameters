@@ -42,6 +42,7 @@ def print_sequence1():
         k = k * 10
         print(k)
 
+
 def draw_circles1():
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
@@ -60,6 +61,16 @@ def draw_circles1():
     print('--------------------------------------------------')
     print('Running draw_circles1:  See graphics window')
     print('--------------------------------------------------')
+
+    window = rg.RoseWindow(400, 400)
+
+    center = rg.Point(200, 200)
+    for k in range(21):
+        circle = rg.Circle(center, 10 * k)
+        circle.attach_to(window)
+        window.render(0.05)  # Pauses for 0.05 seconds after rendering.
+
+    window.close_on_mouse_click()
 
 
 def print_sequence2():
