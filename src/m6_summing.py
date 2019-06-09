@@ -30,20 +30,20 @@ def run_test_sum_cosines():
     print('--------------------------------------------------')
 
     # Test 1:
-    expected = 1.332754045
+    expected = 0.4216237826
     answer = sum_cosines(9)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
     # Test 2:
-    expected2 = 0.724351824
+    expected2 = 1.478254078
     answer2 = sum_cosines(7)
     print('Test 1 expected:', expected2)
     print('       actual:  ', answer2)
 
     # Test 3:
-    expected3 = 1.540302306
-    answer3 = sum_cosines(2)
+    expected3 = -0.5194806481
+    answer3 = sum_cosines(4)
     print('Test 1 expected:', expected3)
     print('       actual:  ', answer3)
 
@@ -67,7 +67,7 @@ def sum_cosines(n):
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
     total = 0
-    for k in range(n):
+    for k in range(n+1):
         total = total + math.cos(k)
 
     return total
@@ -90,18 +90,18 @@ def run_test_sum_square_roots():
 
     # Test 1:
     expected4 = 15.31850971
-    answer4 = sum_square_roots(7)
+    answer4 = sum_square_roots(6)
     print('Test 1 expected:', expected4)
     print('       actual:  ', answer4)
 
     # Test 2:
-    expected4 = 1.414213562
+    expected4 = 3.414213562
     answer4 = sum_square_roots(2)
     print('Test 1 expected:', expected4)
     print('       actual:  ', answer4)
 
     # Test 3:
-    expected4 = 5.863703305
+    expected4 = 8.69213043
     answer4 = sum_square_roots(4)
     print('Test 1 expected:', expected4)
     print('       actual:  ', answer4)
@@ -129,7 +129,7 @@ def sum_square_roots(n):
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
     total = 0
-    for k in range(n):
+    for k in range(n+1):
         total = total + math.sqrt(2*k)
 
     return total

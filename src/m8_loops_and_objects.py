@@ -38,6 +38,7 @@ def print_sequence1():
     print('Running print_sequence1:')
     print('--------------------------------------------------')
 
+    for k =
 
 def draw_circles1():
     """
