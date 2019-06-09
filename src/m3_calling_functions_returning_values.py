@@ -208,7 +208,7 @@ def digits_in_cube(n):
 def run_test_digits_in_power():
     """ Tests the   digits_in_power   function. """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement this function.
+    # DONE: 5. Implement this function.
     #   It TESTS the  digits_in_power  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -272,7 +272,7 @@ def digits_in_power(n, k):
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement this function.
+    # DONE: 7. Implement this function.
     #   It TESTS the  fancy_sums_of_digits  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -291,7 +291,23 @@ def run_test_fancy_sums_of_digits():
     # your 2nd and 3rd tests but READ THOSE TEST CASES CAREFULLY
     # in the doc-string to be sure that you understand the specification.
     # ------------------------------------------------------------------
+    # Test 1:
+    expected11 = 1
+    answer11 = fancy_sums_of_digits(10)
+    print('Test 1 expected:', expected11)
+    print('       actual:  ', answer11)
 
+    # Test 2:
+    expected12 = 19084
+    answer12 = fancy_sums_of_digits(2)
+    print('Test 1 expected:', expected12)
+    print('       actual:  ', answer12)
+
+    # Test 3:
+    expected13 = 60496
+    answer13 = fancy_sums_of_digits(7)
+    print('Test 1 expected:', expected13)
+    print('       actual:  ', answer13)
 
 def fancy_sums_of_digits(n):
     """
@@ -318,13 +334,43 @@ def fancy_sums_of_digits(n):
             -- so this function returns 124309.
     """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # DONE: 8. Implement and test this function.
     #
     ####################################################################
     # IMPORTANT: CALL, as many times as needed,
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ####################################################################
     # ------------------------------------------------------------------
+    x = n ** 1000
+
+    x_real = 0
+
+    while x > 0:
+        r = x % 10
+        x = x // 10
+        x_real += r
+
+
+    y = n ** 999
+
+    y_real = 0
+
+    while y > 0:
+        g = y % 10
+        y = y // 10
+        y_real += g
+
+    j = x_real ** y_real
+
+    fancy_sum = 0
+
+    while j > 0:
+        c = j % 10
+        j = j // 10
+        fancy_sum += c
+    return fancy_sum
+
+
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
