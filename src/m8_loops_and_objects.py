@@ -16,6 +16,8 @@ def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
     print_sequence1()
+    print_sequence2()
+
 
 def print_sequence1():
     """
@@ -94,6 +96,10 @@ def print_sequence2():
     print('Running print_sequence2:')
     print('--------------------------------------------------')
 
+    for k in range(18):
+        k = 50 + (k * 20)
+        print(k)
+        
 
 def draw_circles2():
     """
