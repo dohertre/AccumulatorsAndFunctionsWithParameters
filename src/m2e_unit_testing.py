@@ -20,7 +20,6 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 import rosegraphics as rg
 import math
 
-
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_distance()
