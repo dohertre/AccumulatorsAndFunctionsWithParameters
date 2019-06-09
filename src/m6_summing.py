@@ -47,7 +47,6 @@ def run_test_sum_cosines():
     print('Test 1 expected:', expected3)
     print('       actual:  ', answer3)
 
-
 def sum_cosines(n):
     """
     What comes in:  A non-negative integer n.
