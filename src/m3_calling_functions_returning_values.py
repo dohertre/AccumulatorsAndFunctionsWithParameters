@@ -13,7 +13,6 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 import m3t_tester
 
 
-
 def main():
     """ Calls the   TEST   functions in this module. """
     run_test_sum_of_digits()
@@ -221,20 +220,20 @@ def run_test_digits_in_power():
     print('--------------------------------------------------')
 
     # Test 1:
-    expected8 = 8
-    answer8 = digits_in_power(5, 2)
+    expected8 = 13
+    answer8 = digits_in_power(5,4)
     print('Test 1 expected:', expected8)
     print('       actual:  ', answer8)
 
     # Test 2:
-    expected9 = 28
-    answer9 = digits_in_power(49,4)
+    expected9 = 45
+    answer9 = digits_in_power(9,7)
     print('Test 2 expected:', expected9)
     print('       actual:  ', answer9)
 
     # Test 3:
-    expected10 = 18
-    answer10 = digits_in_power(12,7)
+    expected10 = 27
+    answer10 = digits_in_power(12,5)
     print('Test 3 expected:', expected10)
     print('       actual:  ', answer10)
 
@@ -264,7 +263,7 @@ def digits_in_power(n, k):
 
     while x > 0:
         r = x % 10
-        n = x // 10
+        x = x // 10
         digit_sum_power += r
 
     return digit_sum_power
