@@ -220,6 +220,23 @@ def run_test_digits_in_power():
     print('Testing the   digits_in_power   function:')
     print('--------------------------------------------------')
 
+    # Test 1:
+    expected8 = 8
+    answer8 = digits_in_power(5, 2)
+    print('Test 1 expected:', expected8)
+    print('       actual:  ', answer8)
+
+    # Test 2:
+    expected9 = 28
+    answer9 = digits_in_power(49,4)
+    print('Test 2 expected:', expected9)
+    print('       actual:  ', answer9)
+
+    # Test 3:
+    expected10 = 18
+    answer10 = digits_in_power(12,7)
+    print('Test 3 expected:', expected10)
+    print('       actual:  ', answer10)
 
 
 def digits_in_power(n, k):
@@ -234,13 +251,23 @@ def digits_in_power(n, k):
       since 12 to the 3rd power is 1728 (whose digits sum to 18).
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #
     ####################################################################
     # IMPORTANT: CALL, as many times as needed,
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ####################################################################
     # ------------------------------------------------------------------
+    x = n ** k
+
+    digit_sum_power = 0
+
+    while x > 0:
+        r = x % 10
+        n = x // 10
+        digit_sum_power += r
+
+    return digit_sum_power
 
 
 def run_test_fancy_sums_of_digits():
