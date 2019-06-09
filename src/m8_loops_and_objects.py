@@ -15,7 +15,7 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
-
+    print_sequence1()
 
 def print_sequence1():
     """
@@ -38,7 +38,8 @@ def print_sequence1():
     print('Running print_sequence1:')
     print('--------------------------------------------------')
 
-    for k =
+    for k in range(200):
+        k = k + 10
 
 def draw_circles1():
     """
