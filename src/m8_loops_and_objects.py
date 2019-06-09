@@ -29,7 +29,7 @@ def print_sequence1():
        200
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its doc-string above.
+    # DONE: 2. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -38,8 +38,9 @@ def print_sequence1():
     print('Running print_sequence1:')
     print('--------------------------------------------------')
 
-    for k in range(200):
-        k = k + 10
+    for k in range(21):
+        k = k * 10
+        print(k)
 
 def draw_circles1():
     """
